@@ -30,6 +30,18 @@ const products = [
     { id: 18, name: "Honey Soap", category: "soaps", price: 60, offerprice: 90, image: "./assets/Honey Soap.jpg" },
     { id: 19, name: "Detan Rice Soap", category: "soaps", price: 60, offerprice: 95, image: "./assets/Detan Rice Soap.jpg" },
     { id: 20, name: "Ubtan Soap", category: "soaps", price: 60, offerprice: 100, image: "./assets/ubtan-soap.jpg" },
+    {id: 21,name:"Aloevera moisturising cream",category:"gels_and_creams",price:120,offerprice:180,image:"./assets/aloe-vera-products-like-gel-juice-moisturising-cream.jpg"},
+    {id:22,name:"Cucumber gel",category:"gels_and_creams",price:130,offerprice:210,image:'./assets/cucumber-gel.jpg'},
+        { id: 23, name: "Hydrating Face Wash", category: "face_wash", price: 180, offerprice: 220, image: "./assets/Hydrating Face Wash.avif" },
+        { id: 24, name: "Purifying Face Wash", category: "face_wash", price: 200, offerprice: 240, image: "./assets/Purifying Face Wash.avif" },
+        { id: 25, name: "Brightening Face Wash", category: "face_wash", price: 160, offerprice: 190, image: "./assets/Brightening Face Wash.avif" },
+        { id: 26, name: "Tea Tree Face Wash", category: "face_wash", price: 210, offerprice: 250, image: "./assets/Tea Tree Face Wash.avif" },
+        { id: 27, name: "Gentle Foam Face Wash", category: "face_wash", price: 175, offerprice: 210, image: "./assets/Gentle Foam Face Wash.jpg" },
+        { id: 28, name: "Deep Clean Face Wash", category: "face_wash", price: 190, offerprice: 230, image: "./assets/Deep Clean Face Wash.avif" },
+        { id: 29, name: "Acne Clear Face Wash", category: "face_wash", price: 180, offerprice: 210, image: "./assets/Acne Clear Face Wash.avif" },
+        { id: 30, name: "Anti Pollution Face Wash", category: "face_wash", price: 220, offerprice: 260, image: "./assets/Anti Pollution Face Wash.jpg" }
+    
+      
 ];
 
 // 3. PRODUCT DISPLAY FUNCTION

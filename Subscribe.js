@@ -47,6 +47,78 @@ const cart = [
       image: "./assets/goat-milk-soap.png",
       quantity: 1,
     },
+      {
+        id: 6,
+        name: "Aloe Vera Turmeric Soap",
+        price: 55,
+        image: "./assets/aloe-vera-turmeric-soap.jpg",
+        quantity: 1
+      },
+      {
+        id: 7,
+        name: "Lavender Chamomile Soap",
+        price: 80,
+        image: "./assets/lavender-chamomile-soap.jpg",
+        quantity: 2
+      },
+      {
+        id: 8,
+        name: "Coconut Milk Rose Soap",
+        price: 90,
+        image: "./assets/coconut-milk-rose-soap.avif",
+        quantity: 3
+      },
+      {
+        id: 9,
+        name: "Neem aleover gel",
+        price: 65,
+        image: "./assets/neem-aleovera-gel.avif",
+        quantity: 5
+      },
+      {
+        id: 10,
+        name: "Peppermint Eucalyptus Soap",
+        price: 75,
+        image: "./assets/cucumber-slices-soap.avif",
+        quantity: 4
+      },
+        {
+          id: 11,
+          name: "Green Tea Matcha Soap",
+          price: 85,
+          image: "./assets/green-tea-matcha.jpg",
+          quantity: 2
+        },
+        {
+          id: 12,
+          name: "Oatmeal Honey Soap",
+          price: 60,
+          image: "./assets/oatmeal-honey-soap.jpg",
+          quantity: 3
+        },
+        {
+          id: 13,
+          name: "Charcoal Mint Soap",
+          price: 95,
+          image: "./assets/charcoal-mint-soap.avif",
+          quantity: 4
+        },
+        {
+          id: 14,
+          name: "Saffron Almond cream",
+          price: 100,
+          image: "./assets/saffron-almond-cream.avif",
+          quantity: 1
+        },
+        {
+          id: 15,
+          name: "Tea Tree Citrus Soap",
+          price: 70,
+          image: "./assets/tea-tree-citrus-soap.avif",
+          quantity: 6
+        }
+            
+        
   ];
 
   function updateCart() {
