@@ -74,14 +74,14 @@
 
             <!-- Right-Side Icons -->
             <div class="d-flex align-content-center">
-              <a
+              <!-- <a
                 href="#"
                 class="btn btn-light nav-social-icon"
                 data-bs-toggle="modal"
                 data-bs-target="#logoutModal"
               >
                 <i class="bi bi-person"></i>
-              </a>
+              </a> -->
               <a href="Cart.html" class="btn btn-light nav-social-icon">
                 <i class="bi bi-bag"></i>
               </a>
@@ -615,6 +615,74 @@
 
         <hr />
       </section>
+      <div class="faq-container" id="faqs">
+        <h1>Frequently Asked Questions (FAQs)</h1>
+        
+        <div class="faq">
+          <button class="faq-question">What types of herbal products do you sell?</button>
+          <div class="faq-answer">
+            <p>We offer a wide range of herbal products including natural supplements, herbal teas, essential oils, skincare products, and wellness kits. All our products are carefully sourced and made with the finest organic ingredients.</p>
+          </div>
+        </div>
+        
+        <div class="faq">
+          <button class="faq-question">How do I place an order?</button>
+          <div class="faq-answer">
+            <p>To place an order, browse our products, select the items you want, and add them to your shopping cart. Once you're ready, proceed to checkout by filling out your shipping and payment details.</p>
+          </div>
+        </div>
+      
+        <div class="faq">
+          <button class="faq-question">Do you offer international shipping?</button>
+          <div class="faq-answer">
+            <p>Yes, we offer international shipping to many countries. Shipping costs and delivery times will vary based on your location. You can view shipping options during checkout.</p>
+          </div>
+        </div>
+      
+        <div class="faq">
+          <button class="faq-question">Are the herbal products safe for consumption?</button>
+          <div class="faq-answer">
+            <p>All our herbal products are made with high-quality, organic ingredients and are tested for safety and effectiveness. However, we recommend consulting with a healthcare professional before using any new supplements, especially if you have existing health conditions.</p>
+          </div>
+        </div>
+      
+        <div class="faq">
+          <button class="faq-question">How can I track my order?</button>
+          <div class="faq-answer">
+            <p>After your order has shipped, you will receive an email with a tracking number and a link to track your order. You can use the tracking number on the carrier's website for the most up-to-date shipping information.</p>
+          </div>
+        </div>
+      
+        <div class="faq">
+          <button class="faq-question">Can I return or exchange an item?</button>
+          <div class="faq-answer">
+            <p>Yes, we offer a 30-day return and exchange policy on most items. If you are not satisfied with your purchase, please contact our customer support team, and we will assist you with the return or exchange process.</p>
+          </div>
+        </div>
+      
+        <div class="faq">
+          <button class="faq-question">How do I know if the product is suitable for me?</button>
+          <div class="faq-answer">
+            <p>We recommend reading the product descriptions and ingredients list on each product page to ensure that it meets your needs. Additionally, you can consult with a healthcare provider before making any purchases, especially for supplements and teas.</p>
+          </div>
+        </div>
+      
+        <div class="faq">
+          <button class="faq-question">What payment methods do you accept?</button>
+          <div class="faq-answer">
+            <p>We accept a variety of payment methods, including credit and debit cards, PayPal, and other secure online payment options. You can select your preferred payment method during checkout.</p>
+          </div>
+        </div>
+      
+        <div class="faq">
+          <button class="faq-question">Do you offer any discounts or promotions?</button>
+          <div class="faq-answer">
+            <p>Yes, we offer various discounts and promotions throughout the year. Be sure to sign up for our newsletter or follow us on social media to stay updated on the latest deals and offers!</p>
+          </div>
+        </div>
+      </div>
+      
+
     </main>
     <div class="container">
       <footer class="py-5">
@@ -679,7 +747,7 @@
             <h5 class="text-dark">Service</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
-                <a href="Contact.html" class="nav-link p-0 text-body-secondary">FAQs</a>
+                <a href="index1.html" class="nav-link p-0 text-body-secondary">FAQs</a>
               </li>
               <li class="nav-item mb-2">
                 <a href="Contact.html" class="nav-link p-0 text-body-secondary"
@@ -692,7 +760,7 @@
                 >
               </li>
               <li class="nav-item mb-2">
-                <a href="Contact.html" class="nav-link p-0 text-body-secondary"
+                <a href="terms.html" class="nav-link p-0 text-body-secondary"
                   >Terms & Conditions</a
                 >
               </li>
@@ -717,7 +785,7 @@
                   class="form-control"
                   placeholder="Email address"
                 />
-                <button class="btn btn-dark rounded-1" type="button">
+                <button class="btn btn-dark rounded-1" type="button" id="subscribe">
                   Subscribe
                 </button>
               </div>
@@ -761,6 +829,26 @@
     ></script>
     <script src="script.js"></script>
     <script src="Auth.js"></script>
-    <script src="Subscribe.js"></script>
+  <script src="Subscribe.js"></script>
+  <script>
+    // Get all the FAQ question buttons
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+// Add event listeners to each button
+faqQuestions.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Toggle the associated answer for the clicked question
+    const answer = button.nextElementSibling;
+
+    // If answer is hidden, show it. If it's visible, hide it.
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+    } else {
+      answer.style.display = 'block';
+    }
+  });
+});
+
+  </script>
   </body>
 </html>

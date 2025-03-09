@@ -65,23 +65,20 @@
                 <a href="Soaps.html" class="nav-link">Soaps</a>
               </li>
               <li class="nav-item">
-                <a href="About.html" class="nav-link">About</a>
-              </li>
-              <li class="nav-item">
-                <a href="Contact.html" class="nav-link">Contact</a>
+                <a href="Contact.html" class="nav-link" style="background-color: black;color: white;border-radius: 4px;">Contact</a>
               </li>
             </ul>
 
             <!-- Right-Side Icons -->
             <div class="d-flex align-content-center">
-              <a
+              <!-- <a
                 href="#"
                 class="btn btn-light nav-social-icon"
                 data-bs-toggle="modal"
                 data-bs-target="#logoutModal"
               >
                 <i class="bi bi-person"></i>
-              </a>
+              </a> -->
               <a href="Cart.html" class="btn btn-light nav-social-icon me-5">
                 <i class="bi bi-bag"></i>
               </a>
@@ -277,8 +274,8 @@
             >
               Cancel
             </button>
-            <button type="button" class="btn btn-danger" id="logoutBtn">
-              Logout
+            <button class="btn btn-danger" id="logoutBtn">
+              <a href="index1.html" style="color: white;">Logout</a>
             </button>
           </div>
         </div>
@@ -305,16 +302,22 @@
                   type="text"
                   class="form-control mb-3"
                   placeholder="Name"
+                  id="name"
+                  oninput="validateName()"
                 />
                 <input
                   type="email"
                   class="form-control mb-3"
                   placeholder="Email"
+                  id="email"
+                  oninput="validateEmail()"
                 />
                 <input
                   type="tel"
                   class="form-control mb-3"
                   placeholder="Phone"
+                  id="phone"
+                  oninput="validatePhone()"
                 />
                 <div class="mb-3">
                   <h4 class="text-dark">Preferred method of communication</h4>
@@ -348,10 +351,11 @@
                 <textarea
                   class="form-control mb-3"
                   placeholder="Message"
+                  id="message"
                 ></textarea>
-                <button class="btn btn-primary btn-block">Send</button>
+                <button id="sendBtn" type="button" class="btn btn-primary btn-block">Send</button>
               </div>
-              <div class="bg-white pl-4 py-5 rounded">
+        <div class="bg-white pl-4 py-5 rounded">
                 <a href="javascript:;" class="d-flex align-items-center mb-3">
                   <svg
                     width="30"
@@ -483,7 +487,7 @@
             <h5 class="text-dark">Service</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
-                <a href="Contact.html" class="nav-link p-0 text-body-secondary">FAQs</a>
+                <a href="index1.html" class="nav-link p-0 text-body-secondary">FAQs</a>
               </li>
               <li class="nav-item mb-2">
                 <a href="Contact.html" class="nav-link p-0 text-body-secondary"
@@ -496,7 +500,7 @@
                 >
               </li>
               <li class="nav-item mb-2">
-                <a href="Contact.html" class="nav-link p-0 text-body-secondary"
+                <a href="terms.html" class="nav-link p-0 text-body-secondary"
                   >Terms & Conditions</a
                 >
               </li>
@@ -511,7 +515,7 @@
                 products.
               </p>
               <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                <input id="newsletter" type="text" class="form-control" placeholder="Email address">
+                <input id="newsletter" type="email" id="email" class="form-control" placeholder="Email address">
                 <button class="btn btn-dark rounded-1 ml-2" type="button" id="subscribe">Subscribe</button>
           
               </div>
@@ -555,5 +559,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="Auth.js"></script>
     <script src="Subscribe.js"></script>
+
+    <script>
+  document.getElementById('sendBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+    
+    // Get the values of the fields
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+    
+    // Check if any field is empty
+    if (name === "" || email === "" || phone === "" || message === "") {
+      alert("Please fill in all fields before submitting.");
+    } else {
+      alert("Thank you for contacting us & we will connect you in a short!");
+      document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
+    document.getElementById('radio-group-1').checked = false;
+    document.getElementById('radio-group-2').checked = false;
+    }
+  });
+    </script>
   </body>
 </html>

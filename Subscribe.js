@@ -1,13 +1,30 @@
 const subscribe = document.getElementById('subscribe');
 
 subscribe.addEventListener('click', () => {
-    const email = document.getElementById('newsletter').value.trim(); // Get the latest value
-    if (email) {
-        alert(`Thank you for subscribing! You will receive updates at ${email}`);
-    } else {
+    const emailInput = document.getElementById('newsletter');
+    const email = emailInput.value.trim(); // Get the latest value
+
+    // Email pattern for validation
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // If the email is empty
+    if (email === '') {
+        alert('Please enter an email address.');
+        return;
+    }
+
+    // Validate email format
+    if (!emailPattern.test(email)) {
+        emailInput.setCustomValidity("Please enter a valid email address.");
         alert('Invalid email address');
+    } else {
+        emailInput.setCustomValidity(""); // Reset custom validity
+        alert(`Thank you for subscribing! You will receive updates at ${email}`);
+        document.getElementById('newsletter').value='';
+
     }
 });
+
 
 
 

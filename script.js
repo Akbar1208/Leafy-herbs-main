@@ -60,6 +60,9 @@ function displayProducts(products) {
                             <span class="text-muted text-decoration-line-through">₹${product.offerprice}</span>
                         </p>
                         <button class="btn btn-dark">
+                            <a href='Product.html?id=${product.id}' class="text-white text-decoration-none">Buy Now</a>
+                        </button>
+                        <button class="btn btn-dark">
                             <a href='Product.html?id=${product.id}' class="text-white text-decoration-none">View Details</a>
                         </button>
                     </div>
